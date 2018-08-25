@@ -8,5 +8,5 @@
 
 template "/etc/motd" do
   source "motd.erb"
-  mode "0644""
+  mode "0644"
 end
