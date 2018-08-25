@@ -30,7 +30,8 @@ service "httpd" do
 	action [ :enable, :start ]
 end
 
+node.default["apache"]["indexfile"] = "index2.html"
 cookbook_file "/var/www/html/index.html" do
-	source "index.html"
+	source node["apache"]["indexfile"]
 	mode "0644"
 end
